@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HotelMauiApp.BookingsPage"
+             Title="Book a Room!">
+    <StackLayout Padding="20" Spacing="15">
+        <Label Text="Room Type" FontSize="18" />
+        <Picker x:Name="RoomTypePicker" Title="Select Room Type">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Single</x:String>
+                    <x:String>Double</x:String>
+                    <x:String>Deluxe</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Check-In Date" FontSize="18" />
+        <DatePicker x:Name="StartDatePicker" />
+
+        <Label Text="Check-Out Date" FontSize="18" />
+        <DatePicker x:Name="EndDatePicker" />
+
+        <Button Text="Book Room"
+                Clicked="OnBookRoomClicked"
+                BackgroundColor="Green"
+                TextColor="White" />
+    </StackLayout>
+</ContentPage>

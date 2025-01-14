@@ -1,0 +1,46 @@
+﻿@page
+@model HotelWebApp.Pages.Reviews.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Customers Reviews</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Review[0].BookingId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Review[0].Rating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Review[0].Comment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Review[0].DateCreated)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Review) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookingId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,54 @@
+﻿@page
+@model HotelWebApp.Pages.Rooms.CreateModel
+
+@{
+    ViewData["Title"] = "Create Room";
+}
+
+<h1>Create Room</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Room.RoomNumber"></label>
+                <input asp-for="Room.RoomNumber" class="form-control" />
+                <span asp-validation-for="Room.RoomNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.Type"></label>
+                <select asp-for="Room.Type" class="form-control">
+                    <option value="Single">Single</option>
+                    <option value="Double">Double</option>
+                    <option value="Suite">Suite</option>
+                </select>
+                <span asp-validation-for="Room.Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.PricePerNight"></label>
+                <input asp-for="Room.PricePerNight" class="form-control" />
+                <span asp-validation-for="Room.PricePerNight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.Status"></label>
+                <select asp-for="Room.Status" class="form-control">
+                    <option value="Available">Available</option>
+                    <option value="Occupied">Occupied</option>
+                </select>
+                <span asp-validation-for="Room.Status" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

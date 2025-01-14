@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HotelMauiApp.MainPage">
+
+    <StackLayout Padding="20" Spacing="15" VerticalOptions="CenterAndExpand">
+        <Label Text="Welcome to Hotel Management App" 
+               FontSize="24" 
+               HorizontalOptions="Center" 
+               Margin="0, 20, 0, 20" />
+
+        <Button Text="Make a Booking"
+                BackgroundColor="Green"
+                TextColor="White"
+                CornerRadius="10"
+                FontSize="18"
+                HeightRequest="50"
+                Clicked="OnBookingClicked" />
+
+        <Button Text="Leave a Review"
+                BackgroundColor="Blue"
+                TextColor="White"
+                CornerRadius="10"
+                FontSize="18"
+                HeightRequest="50"
+                Clicked="OnReviewClicked" />
+    </StackLayout>
+
+</ContentPage>

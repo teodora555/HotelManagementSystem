@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HotelMauiApp.RoomsPage"
+             Title="Available Rooms">
+    <StackLayout Padding="10">
+        <Label Text="Available Rooms" 
+               FontSize="Large" 
+               HorizontalOptions="Center" />
+        <ListView x:Name="RoomsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" 
+                                     Padding="5">
+                            <Label Text="{Binding RoomNumber}"
+                                   FontSize="Medium" />
+                            <Label Text="{Binding Type}" 
+                                   FontSize="Small" />
+                            <Button Text="Book" 
+                                    Clicked="OnRoomBookingClicked" 
+                                    CommandParameter="{Binding Id}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Make a Booking"
+                Clicked="OnMakeBookingClicked" />
+    </StackLayout>
+</ContentPage>

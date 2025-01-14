@@ -1,0 +1,18 @@
+﻿@page
+@model HotelWebApp.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to Hotel Management System</h1>
+    <p class="lead">Manage rooms, bookings and reviews efficiently.</p>
+    <hr class="my-4">
+</div>
+
+<div class="text-center mt-4">
+    <a asp-page="/Rooms/Index" class="btn btn-primary btn-lg">Manage Rooms</a>
+    <a asp-page="/Bookings/Index" class="btn btn-secondary btn-lg">Manage Bookings</a>
+    <a asp-page="/Reviews/Index" class="btn btn-secondary btn-lg">See Reviews</a>
+</div>
